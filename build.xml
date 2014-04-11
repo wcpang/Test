@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="PPIS" default="build">
  <target name="build"
-   depends="prepare,phpdox,phpunit"/>
+   depends="prepare,phpunit"/>
 
  <target name="build-parallel"
    depends="prepare,tools-parallel,phpunit"/>
