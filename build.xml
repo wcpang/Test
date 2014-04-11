@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="PPIS" default="build">
  <target name="build"
-   depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit"/>
+   depends="prepare,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit"/>
 
  <target name="build-parallel"
    depends="prepare,lint,tools-parallel,phpunit"/>
@@ -34,21 +34,7 @@
   <mkdir dir="${basedir}/build/phpdox"/>
  </target>
 
- <target name="lint" description="Perform syntax check of sourcecode files">
-  <apply executable="php" failonerror="true">
-   <arg value="-l" />
 
-   <fileset dir="${basedir}/src">
-    <include name="**/*.php" />
-    <modified />
-   </fileset>
-
-   <fileset dir="${basedir}/tests">
-    <include name="**/*.php" />
-    <modified />
-   </fileset>
-  </apply>
- </target>
 
  <target name="phploc" description="Measure project size using PHPLOC">
   <exec executable="phploc">
