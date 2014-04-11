@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="name-of-project" default="build">
+<project name="PPIS" default="build">
  <target name="build"
    depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit"/>
 
@@ -38,8 +38,8 @@
   <apply executable="php" failonerror="true">
    <arg value="-l" />
 
-   <fileset dir="${basedir}/src">
-    <include name="**/*.php" />
+   <fileset dir="${basedir}">
+    <include name="*.php" />
     <modified />
    </fileset>
 
@@ -55,7 +55,7 @@
    <arg value="--count-tests" />
    <arg value="--log-csv" />
    <arg value="${basedir}/build/logs/phploc.csv" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
@@ -64,7 +64,7 @@
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
