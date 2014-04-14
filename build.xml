@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="jenkins-sample" basedir="." default="test">
+<project name="Test" basedir="." default="test">
   <target name="clean">
     <delete dir="reports" includeemptydirs="true" />
     <delete dir="clover" includeemptydirs="true" />
