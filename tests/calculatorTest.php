@@ -1,5 +1,5 @@
 <?php
-require_once 'calculator.php';
+require_once '../src/calculator.php';
 
 require_once 'PHPUnit/Framework/TestCase.php';
 
